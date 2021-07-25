@@ -1,0 +1,111 @@
+.footer {
+    display: grid;
+    background-color: $darkBlue;
+    color: $white;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "logo links1 links2 cta"
+                          "social links1 links2 cta";
+    padding: 4rem;
+    gap: 1rem;
+    justify-items: start;
+    
+    
+    @include tablet() {
+        display: block;
+        text-align: center;
+    }
+    a {
+        color: $white;
+    }
+    &__logo {
+        grid-area: logo;
+
+        @include tablet() { 
+            margin-bottom: 2.5rem;
+        }
+        display: inline-block;
+    }
+    &__social {
+        grid-area: social;
+        height: 1.25rem;
+        align-self: end;
+
+        @include tablet() {  
+            margin-bottom: 3rem;
+        }
+        a {
+            display: inline-block;  
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+            &:hover svg path {
+                fill: $limeGreen;
+            }
+            &:hover svg {
+                transform: rotate(1s);
+            }
+                  
+        }
+        a:not(:last-child) {
+                margin-right: 1.5rem;
+         
+        }
+    }
+    &__links {
+
+        font-size: 1.5rem;
+
+        @include tablet() {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            display: block;
+            line-height: 2.25;
+            @include tablet() {
+                flex: 0 0 auto;
+            }
+            &:hover {
+                color: $limeGreen;
+            } 
+        }
+        &.col1 {
+            grid-area: links1;
+        }
+
+        &.col2 {
+            grid-area: links2;
+
+            @include tablet() {   
+                margin-bottom: 1.875rem;
+            }
+        }
+    }
+    &__cta {
+        grid-area: cta;
+        justify-self: end;
+        text-align: right;
+
+        @include tablet() {
+            margin-top: 3.75rem;
+            text-align: center;
+        }
+        a.button {
+            @include tablet() {  
+                margin-bottom: 1.875rem;
+            }
+        }
+    }
+    &__copyright {
+        color:$grayishBlue;
+        margin-top: 3rem;
+        margin-bottom: 0;
+        @include tablet() {
+            margin-top: 0;
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+// Colors
+
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen:hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue:hsl(220, 16%, 96%);
+$veryLightGray:  hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+$font-sm: 1.4rem; //14px
+$font-md: 1.8rem; // 18px
+$font-lg: 2.6rem;
+$font-xlg: 5.7rem; // 57px
+//breakpoints
+
+$extra-large-device-width: 1366px;
+$large-device-width: 1199px; // desktops < 1199px
+$medium-device-width: 991px; //tablets < 991px
+$small-device-width: 767px; // landscape phones < 767px
+$extra-small-device-width: 575px; // phone < 576px

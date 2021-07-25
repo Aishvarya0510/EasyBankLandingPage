@@ -1,0 +1,106 @@
+@import './variables';
+
+.features {
+    background-color: $lightGrayishBlue;
+    margin-top: -8.95rem;
+
+    h2 {
+        @include tablet() {
+            text-align: center;
+        }
+        @include mobile() {
+            max-width: 257.75px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    p {
+        @include mobile() {
+            text-align: center;
+            line-height: 1.5;
+            font-size: 1.7rem;
+        }
+    }
+    .feature {
+
+        &__grid {
+            display: flex;
+            flex-wrap: wrap;
+            
+            @include mobile() {
+                margin-top: 0;
+                flex-direction: column;
+            }
+        }
+        &__intro {
+            width: 55%;
+            margin-bottom: 4.49625rem;
+
+            @include tablet() {
+                width: unset;
+                text-align: center;
+            }
+            @include mobile() {
+                padding-top: 2rem;
+                margin-bottom: 6.035625rem;
+            }
+        }
+        &__heading-text {
+        
+            @include tablet() {
+                max-width: 384px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @include mobile() {
+            }
+
+        }
+        &__item {
+            flex: 1;
+            padding: 0.9375rem;
+            
+            @include tablet() {
+                flex: 0 0 50%;
+                text-align: center;
+            }
+            @include mobile() {
+                flex: 0 0 100%;
+            }
+        }
+        &__icon {
+            margin-bottom: 2.669375rem;
+            
+            @include mobile() {
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+            img {
+                @include mobile() { 
+                    height: 7rem;
+                    width: 7rem;
+                }
+            }
+        }
+        &__title {
+            color: $darkBlue;
+            font-size: 2.4rem;
+            margin-bottom: 2.9rem;
+
+            @include mobile() {
+                margin-bottom: 2rem;
+                font-size: 2rem; 
+                text-align: center;
+            }
+        }
+        &__description {
+            p {
+                font-size: 1.6rem;
+                line-height: 1.7;
+                @include mobile() {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

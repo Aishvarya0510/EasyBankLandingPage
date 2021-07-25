@@ -1,0 +1,162 @@
+@import './variables';
+@import './mixins';
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.3;
+    font-size: $font-md;
+    font-weight: 300;
+    color:$grayishBlue;
+    overflow-x: hidden;
+    
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+p {
+    margin: 0;
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+ 
+}
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 300;
+    line-height: 1.2;
+    color: $darkBlue;
+}
+h2 {
+    font-size: 3.834rem;
+     margin-bottom: 2.111875rem;
+
+     @include mobile() {
+         font-size: 2.875rem;
+     }
+}
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: $grayishBlue;
+}
+//section spacing
+.section-margin {
+    margin-bottom: 8.9375rem;
+}
+// Flexbox 
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+    
+    &-ac-c {
+        align-items: center;
+    }
+}
+// Spacing
+.container {
+    max-width: 1123px;
+    margin: 0 auto;
+    
+    // @include mobile() {
+    //     max-width: ;
+    // }
+    &--pall {
+        padding-top: 10rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        padding-bottom: 10rem;
+        
+        @include mobile() {
+            padding-bottom: 4.375rem;
+            padding-top: 4.375rem;
+        }
+    }
+    &--px {
+        padding-left: 1.5rem;
+        padding-bottom: 10rem;
+
+        @include mobile() {
+            padding-top: 4.375rem;
+        }
+    }
+    &--py {
+        padding-top: 10rem;
+        padding-right: 1.5rem;
+
+        @include mobile() {
+            padding-top: 4.375rem;
+        }
+    }
+    &--pr {
+        padding-right: 1.5rem;
+    }
+    &--pl {
+        padding-left: 1.5rem;
+    }
+    &--pt {
+        padding-top: 10rem;
+        @include mobile() {
+            padding-top: 4.375rem;
+        }
+    }
+    &--pb {
+        padding-bottom: 10rem;
+        @include mobile() {
+            padding-bottom: 4.375rem;
+        }
+    }
+}
+button, .button {
+    padding: 1.6rem 4rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    border:0;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: $font-sm;
+    transition: opacity 300ms ease-in;
+    display: inline-block;
+
+    &:hover {
+        opacity: 0.75 !important; 
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+    @include tablet(){
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include desktop() {
+        display: none;
+    }
+}
+
+// Bootstrap column percentages:
+
+// col-9 -75%
+// col-8 - 66.66667%
+// col-7 -58.33333%
+// col-6 - 50%
+// col-5 -41.66667%
+// col-4 -33.33333%
+// col-3 - 25%
+// col-2 -16.66667%
+// col-1 - 8.33333%
